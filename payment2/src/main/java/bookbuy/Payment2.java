@@ -31,9 +31,9 @@ public class Payment2 {
     }
     @PostUpdate
     public void onPostUpdate(){
-        BuyRefunded refunded = new BuyRefunded();
-        BeanUtils.copyProperties(this, refunded);
-        refunded.publishAfterCommit();
+        BuyCancelled buycancelled = new BuyCancelled();
+        BeanUtils.copyProperties(this, buycancelled);
+        buycancelled.publishAfterCommit();
     }
 
     public Long getId() {
