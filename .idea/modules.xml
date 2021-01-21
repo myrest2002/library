@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/book/book.iml" filepath="$PROJECT_DIR$/book/book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bookbuy.iml" filepath="$PROJECT_DIR$/.idea/bookbuy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/boot-camp-gateway.iml" filepath="$PROJECT_DIR$/gateway/boot-camp-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buypage/buypage.iml" filepath="$PROJECT_DIR$/buypage/buypage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mypage/mypage.iml" filepath="$PROJECT_DIR$/mypage/mypage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment/payment.iml" filepath="$PROJECT_DIR$/payment/payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment2/payment2.iml" filepath="$PROJECT_DIR$/payment2/payment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rental/rental.iml" filepath="$PROJECT_DIR$/rental/rental.iml" />
+    </modules>
+  </component>
+</project>
