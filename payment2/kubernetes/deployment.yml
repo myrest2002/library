@@ -16,22 +16,27 @@ spec:
     spec:
       containers:
         - name: payment2
-          image: username/payment2:latest
+          image: skcc005.azurecr.io/payment2:latest
           ports:
             - containerPort: 8080
-          readinessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 10
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 10
-          livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 120
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 5
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
+#           readinessProbe:
+#             httpGet:
+#               path: '/actuator/health'
+#               port: 8080
+#             initialDelaySeconds: 10
+#             timeoutSeconds: 2
+#             periodSeconds: 5
+#             failureThreshold: 10
+#           livenessProbe:
+#             httpGet:
+#               path: '/actuator/health'
+#               port: 8080
+#             initialDelaySeconds: 120
+#             timeoutSeconds: 2
+#             periodSeconds: 5
+#             failureThreshold: 5
