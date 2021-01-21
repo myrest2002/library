@@ -15,7 +15,7 @@ public class Payment2 {
     private Long memberId;
     private String reqState;
     @PrePersist
-    public void onPrePersist(){
+    public void onPostPersist(){
         BuyPaid paid = new BuyPaid();
         BeanUtils.copyProperties(this, paid);
         paid.publishAfterCommit();
