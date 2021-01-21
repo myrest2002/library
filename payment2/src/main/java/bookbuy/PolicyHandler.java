@@ -24,18 +24,17 @@ public class PolicyHandler{
 
         if(buyCancelled.isMe()){
             System.out.println("##### listener  : " + buyCancelled.toJson());
+            if(buyCancelled.isMe()) {
+                System.out.println("##### listener  : " + buyCancelled.toJson());
 
-            Optional<Payment2> paymentOptional = payment2Repository.findById(buyCancelled.getId());
-            Payment2 payment = paymentOptional.get();
 
-            payment.setId(buyCancelled.getId());
-            payment.setMemberId(buyCancelled.getMemberId());
-            payment.setBookId(buyCancelled.getBookId());
-            payment.setReqState(buyCancelled.getReqState());
+                payment2Repository.findById(buyCancelled.getBookId()).ifPresent(Payment2 -> {
+                    Payment2.setReqState(buyCancelled.getReqState());
+                    payment2Repository.save(Payment2);
+                });
+                System.out.println("##### listener Ship : " + buyCancelled.toJson());
 
-            payment2Repository.save(payment);
-
-            System.out.println("##### listener Ship : " + buyCancelled.toJson());
+            }
         }
     }
 
